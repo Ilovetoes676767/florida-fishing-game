@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Florida Coast Fishing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">FLORIDA OFFSHORE</p>
+          <h1>Florida Coast Fishing</h1>
+        </div>
+        <div class="wallet-box">
+          <span>Cash</span>
+          <strong id="moneyValue">$150</strong>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <aside class="sidebar">
+          <div class="card stats-panel">
+            <h2>Catch Log</h2>
+            <div class="stat-row">
+              <span>Total Caught</span>
+              <strong id="caughtValue">0</strong>
+            </div>
+            <div class="stat-row">
+              <span>Best Catch</span>
+              <strong id="bestFishValue">-</strong>
+            </div>
+            <div class="stat-row">
+              <span>Zone</span>
+              <strong id="zoneValue">Atlantic Coast</strong>
+            </div>
+          </div>
+
+          <div class="card fish-panel">
+            <h2>Fish Table</h2>
+            <ul id="fishList" class="fish-list"></ul>
+          </div>
+        </aside>
+
+        <section class="play-area">
+          <canvas id="gameCanvas" width="960" height="540" aria-label="Florida Fishing Game"></canvas>
+
+          <div class="hud">
+            <div class="meter">
+              <label>Progress</label>
+              <div class="bar"><div id="progressBar" class="fill progress-fill"></div></div>
+            </div>
+            <div class="meter">
+              <label>Tension</label>
+              <div class="bar"><div id="tensionBar" class="fill tension-fill"></div></div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="castBtn" class="primary">Cast Line</button>
+            <button id="resetBtn" class="secondary">Reset Trip</button>
+          </div>
+
+          <div id="statusCard" class="status-card">
+            <p id="statusText">Find a good spot and cast out into the Gulf.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
